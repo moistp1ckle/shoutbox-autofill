@@ -49,7 +49,7 @@ if (localStorage.getItem("autofill_mentions") != 0) {
                uids.push(uid);
                people.push({name: username, rank: rank});
                $('#message_input').atwho('load', '@', people);
-               console.log("Added "+username+" with "+rank+" from Shoutbox");
+               console.log("Added "+username+" with "+rank+" from Shouftbox");
            }
        }
    });
