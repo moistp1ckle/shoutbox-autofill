@@ -7,7 +7,7 @@
 // @include      /^http.*?:\/\/cracked.io\/*$
 // @match        *://cracked.io/*index.php
 // @match        *://cracked.io/shoutbox.php
-// @icon         https://www.google.com/s2/favicons?domain=cracked.to
+// @icon         https://www.google.com/s2/favicons?domain=cracked.io
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // ==/UserScript==
