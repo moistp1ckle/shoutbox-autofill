@@ -32,7 +32,7 @@
     `);
   $("body").append(`
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moistp1ckle/shoutbox-autofill@latest/inc/style.css">
-<script type="text/javascript" src="https://nulled.gay/LngF3W.txt?raw=true"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/moistp1ckle/shoutbox-autofill@latest/inc/autofill.js"></script>
   `);
     }, false);
 })();
