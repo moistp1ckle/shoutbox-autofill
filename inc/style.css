@@ -1,0 +1,93 @@
+.atwho-view{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+    margin-top:18px;
+    background:#222222;
+    color:#AAAAAA;
+    border: 1px solid #2A2A2A;
+    border-radius:3px;
+    box-shadow: 0px 0px 8px #1b1919;
+    min-width:120px;
+    z-index:11110!important;
+    padding: 4px;
+    margin-bottom: 100px;
+}
+.atwho-view .atwho-header{
+    padding:5px;
+    margin:5px;
+    cursor:pointer;
+    color:#6f8092;
+    font-size:11px;
+    font-weight:700
+}
+.atwho-view .atwho-header .small{
+    color:#6f8092;
+    float:right;
+    padding-top:2px;
+    margin-right:-5px;
+    font-size:12px;
+    font-weight:400
+}
+.atwho-view .atwho-header:hover{
+    cursor:default
+}
+.atwho-view .cur{
+    background:#3875D7;
+    color:#fff;
+    border-radius:3px;
+}
+.atwho-view .cur small{
+    color:#fff
+}
+.atwho-view strong{
+    color:#CDCDCD
+}
+.atwho-view .cur strong{
+    color:#fff;
+    font:700
+}
+.atwho-view ul{
+    list-style:none;
+    padding:0;
+    margin:auto;
+    max-height:200px;
+    overflow-y:auto
+}
+.atwho-view ul li img{
+    margin-right: 5px;
+    max-height: 20px;
+    width: auto;
+}
+.atwho-view ul li{
+    display:block;
+    padding:5px;
+    border-bottom:1px solid #2A2A2A;
+    cursor:pointer
+}
+.atwho-view ul li:last-of-type{
+    border: none;
+}
+.atwho-view small{
+    font-size:smaller;
+    color:#777;
+    font-weight:400
+}
+.atwho-view:nth-of-type(2) .cur{
+    background:#2b2b2ba6;
+}
+.atwho-view:nth-of-type(2) strong{
+    color: inherit;
+    text-decoration: underline;
+}
+.atwho-view:nth-of-type(2) .cur strong{
+    color:inherit;
+}
+.atwho-view:nth-of-type(2) .registered_rank strong{
+    color: #fff;
+}
+span.at {
+    color: inherit;
+    background: none;
+}
