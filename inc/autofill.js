@@ -8,6 +8,7 @@ $('#auto_mentions').change(function() {
     if(this.checked) { localStorage.setItem('auto_mentions', 1); }
     else { localStorage.setItem('auto_mentions', 0); }
 });
+
 if (localStorage.getItem("autofill_smiles") != 0) {
    var emojis = $.map(smilies_list, function(value, data, i) {return {key: value, name:data}});
    $('#message_input').atwho({
@@ -17,8 +18,9 @@ if (localStorage.getItem("autofill_smiles") != 0) {
       insertTpl: '${name}'
    });
 }
+
 if (localStorage.getItem("autofill_mentions") != 0) {
-   var uids = [current_uid];
+   var uids = [];
    var people = [];
    ppl=0;
    $("#online_users>span>a").each(function() {
@@ -33,14 +35,25 @@ if (localStorage.getItem("autofill_mentions") != 0) {
        }
    });
    console.log("Added "+ppl+" Users from Online List");
+   
+   people.push({name: "everyone", rank: "registered_rank"});
+
    $('#message_input').atwho({
       at: "@",
       data: people,
       displayTpl: '<li><span class="${rank}">@${name}</span></li>',
       insertTpl: '@${name}'
    });
+
    $('.shoutbox-messages').bind('DOMSubtreeModified', function(){
        $msg=$(this).find(".entry:nth-of-type(1)");
+       $text = $msg.find(".text");
+       if ($text.text() != null && $text.text().includes("@everyone")) {
+           Shoutbox.mentionSound.play();
+           $msg.addClass("mention");
+           $text.html($text.html().replace(/@everyone/g, '@<a href="/Sango" onclick="return false;"><span class="registered_rank">everyone</span></a>'));
+       }
+
        if ((uid=$msg.attr("data-user")) != null && uid != "" && Object.values(uids).indexOf(uid) == -1) {
            $elm=$msg.find(".user>a>span");
            rank=$elm.attr("class");
