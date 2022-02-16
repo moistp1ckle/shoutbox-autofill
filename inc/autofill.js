@@ -49,7 +49,7 @@ if (localStorage.getItem("autofill_mentions") != 0) {
        $msg=$(this).find(".entry:nth-of-type(1)");
        $text = $msg.find(".text");
        if ($text.text() != null && $text.text().includes("@everyone")) {
-           Shoutbox.mentionSound.play();
+           // Shoutbox.mentionSound.play(); disabled cuz annoying
            $msg.addClass("mention");
            $text.html($text.html().replace(/@everyone/g, '@<a href="/Sango" onclick="return false;"><span class="registered_rank">everyone</span></a>'));
        }
