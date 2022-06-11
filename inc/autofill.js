@@ -51,7 +51,7 @@ if (localStorage.getItem("autofill_mentions") != 0) {
        if ($text.text() != null && $text.text().includes("@everyone")) {
            // Shoutbox.mentionSound.play(); disabled cuz annoying
            $msg.addClass("mention");
-           $text.html($text.html().replace(/(<a href\=\"https:\/\/i.imgur.com\/.*?)>/g, '@\1 rel=”noreferrer”>').replace(/@everyone/g, '@<a href="/Sango" onclick="return false;"><span class="registered_rank">everyone</span></a>'));
+           $text.html($text.html().replace(/(<a href\=\"https:\/\/i.imgur.com\/.*?)>  <a (href=\"https:\/\/i.imgur.com\/.*?)<\/a>/g, '@<a rel=”noreferrer” \1<\/a>').replace(/@everyone/g, '@<a href="/Sango" onclick="return false;"><span class="registered_rank">everyone</span></a>'));
        }
 
        if ((uid=$msg.attr("data-user")) != null && uid != "" && Object.values(uids).indexOf(uid) == -1) {
