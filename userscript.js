@@ -32,7 +32,7 @@
     `);
   $("body").append(`
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moistp1ckle/shoutbox-autofill@latest/inc/style.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/moistp1ckle/shoutbox-autofill@latest/inc/autofill.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/moistp1ckle/shoutbox-autofill@latest/inc/autofill.js?t=`+Date.now()+`"></script>
   `);
     }, false);
 })();
