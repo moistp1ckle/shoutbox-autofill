@@ -55,7 +55,10 @@ if (localStorage.getItem("autofill_mentions") != 0) {
        }
         if ($text.text() != null && $text.text().includes("i.imgur.com")) {
            $text.html($text.html().replace(/<a (href=\"https:\/\/i.imgur.com\/.*?)<\/a>/g, '<a rel="noreferrer" $1<\/a>'));
+       }if ($text.text() != null && $text.text().includes("youtube.com")) {
+           $text.html($text.html().replace(/(<a href=\"https:\/\/www.youtube.com\/watch\?v=dQw4w9WgXcQ\" target=\"_blank\">).*?<\/a>/g, '$1\[Rick Roll\]<\/a>'));
        }
+
 
        if ((uid=$msg.attr("data-user")) != null && uid != "" && Object.values(uids).indexOf(uid) == -1) {
            $elm=$msg.find(".user>a>span");
