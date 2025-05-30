@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Shoutbox Autofill by Sango
-// @namespace    https://leaked.wiki
+// @namespace    https://leaked.tools
 // @version      0.1
 // @description  Adds Autofill to Mentions & Smiles
 // @author       Sango
-// @include      /^http.*?:\/\/cracked.io\/*$
-// @match        *://cracked.io/*index.php
-// @match        *://cracked.io/shoutbox.php
+// @include      /^http.*?:\/\/cracked.sh\/*$
+// @match        *://cracked.sh/*index.php
+// @match        *://cracked.sh/shoutbox.php
 // @icon         https://www.google.com/s2/favicons?domain=cracked.io
 // @grant        none
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
