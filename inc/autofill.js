@@ -14,7 +14,7 @@ if (localStorage.getItem("autofill_smiles") != 0) {
    $('#message_input').atwho({
       at: ":",
       data: emojis,
-      displayTpl: '<li><img src="https://static.cracked.to/images/smilies/${key}" class="smilie">${name}</li>',
+      displayTpl: '<li><img src="https://static.cracked.sh/images/smilies/${key}" class="smilie">${name}</li>',
       insertTpl: '${name}'
    });
 }
